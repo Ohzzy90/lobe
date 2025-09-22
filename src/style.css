@@ -456,10 +456,6 @@ h1{
   padding: 1rem 0 !important;
   z-index: 1000 !important;
 }
-.footer-items{
-  margin-top: 3rem;
-  margin-bottom: 3em;
-}
 @media (max-width: 768px) {
  p,h5, .card-text, .fs-sub{
     font-size: 1.125rem !important;
