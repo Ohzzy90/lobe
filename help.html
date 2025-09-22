@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+    <link rel="stylesheet" href="/src/fontawesome-free-6.2.0-web/css/all.min.css" />
+    <link rel="stylesheet" href="/examples.css" />
+    <link rel="stylesheet" href="src/style.css" />
+    <link href="/src/bootstrap-5.3.8-dist/css/bootstrap.css" rel="stylesheet" />
+</head>
+<style>
+    .nav-pills .nav-link.active {
+        background-color: #04ddb2;
+        color: #fff;
+        font-weight: bold;
+        border-radius: 0.5rem;
+    }
+
+    .nav-pills .nav-link {
+        color: #000000;
+    }
+
+    .accordion-button:focus {
+        box-shadow: none;
+        outline: none;
+    }
+
+    .accordion-button:not(.collapsed) {
+        background-color: rgba(255, 255, 255, 0.327);
+        color: #4d4d4d;
+    }
+
+    .accordion-button {
+        background-color: #fff;
+        color: #000;
+        border: none;
+        box-shadow: none;
+    }
+
+    .accordion-button:active(.collapsed) {
+        background-color: rgba(153, 30, 30, 0.327);
+        color: #4d4d4d;
+    }
+
+    .accordion-item {
+        border: none;
+        border-bottom: 1px solid #ccc;
+        border-radius: 0;
+        padding-top: 1rem !important;
+        padding-bottom: 1rem !important;
+    }
+
+    .nav-tab-holder {
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .fs-18 {
+        font-size: 1.125rem;
+    }
+</style>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-md bg-body-white pt-3" style="top: 0">
+            <div class="container-fluid d-flex align-items-center justify-content-between">
+                <a class="navbar-brand d-flex align-items-center" href="#">
+                    <img src="/src/Resources/SVG/logo.svg" alt="Logo" class="w-75" />
+                </a>
+
+                <button class="navbar-toggler bg-accent-100 rounded-circle py-2 px-2" type="button"
+                    data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav mx-auto mb-2 mb-md-0 text-left">
+                        <li class="nav-item px-100">
+                            <a class="nav-link fs-primary-nav fw-bold opacity-75" href="/home">Overview</a>
+                        </li>
+                        <li class="nav-item px-100">
+                            <a class="nav-link fs-primary-nav fw-bold opacity-75" href="/examples">Examples</a>
+                        </li>
+                        <li class="nav-item px-100">
+                            <a class="nav-link fs-primary-nav fw-bold opacity-75" href="/tour">Tour</a>
+                        </li>
+                        <li class="nav-item px-100">
+                            <a class="nav-link fs-primary-nav fw-bold opacity-75" href="/blog">Blog</a>
+                        </li>
+                        <li class="nav-item px-100">
+                            <a class="nav-link active fs-primary-nav fw-bold opacity-75" href="/help">Help</a>
+                        </li>
+                    </ul>
+                    <div class="mt-3 mt-md-0 ms-md-3 text-center text-md-end">
+                        <a href="/src/Resources/lobe.txt" download="">
+                            <button class="btn fs-btn rounded-pill bg-accent text-white fw-bold nav-btn py-2 px-3"
+                                type="button" id="download-btn">
+                                Download
+                            </button></a>
+                    </div>
+                    <div id="confetti-container" style="
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                pointer-events: none;
+                overflow: hidden;
+              "></div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <div class="container">
+                <div class="header" style="margin-top: 8rem; text-align: center">
+                    <h1 class="fs-primary-heading fw-black">
+                        Lobe <span class="clr-accent">Help</span>
+                    </h1>
+                    <p class="" style="margin: 0 auto; width: 300px">
+                        Everything you need to know to train great machine learning models
+                        with Lobe.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="container py-5">
+                        <div class="tab-content" id="v-pills-tabContent">
+                            <div class="tab-pane fade show active" id="pane-home" role="tabpanel">
+                                <div class="accordion" id="accordionExample">
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button fw-bold fs-18" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#collapseOne"
+                                                aria-expanded="true" aria-controls="collapseOne">
+                                                What is lobe?
+                                            </button>
+                                        </h2>
+                                        <div id="collapseOne" class="accordion-collapse collapse show"
+                                            data-bs-parent="#accordionExample">
+                                            <div class="accordion-body fs-18">
+                                                Lobe is a free, private desktop application that has
+                                                everything you need to take your machine learning
+                                                ideas from prototype to production.
+                                                <div class="list">
+                                                    <ul role="list" class="d-grid gap-4 pt-4">
+                                                        <li>
+                                                            <i class="fa-solid fa-check rounded-circle text-white bg-accent p-1 me-3"
+                                                                style="font-size: 10px"></i>Label your examples
+                                                        </li>
+                                                        <li>
+                                                            <i class="fa-solid fa-check rounded-circle text-white bg-accent p-1 me-3"
+                                                                style="font-size: 10px"></i>Train a model
+                                                        </li>
+                                                        <li>
+                                                            <i class="fa-solid fa-check rounded-circle text-white bg-accent p-1 me-3"
+                                                                style="font-size: 10px"></i>Evaluate training results
+                                                        </li>
+                                                        <li>
+                                                            <i class="fa-solid fa-check rounded-circle text-white bg-accent p-1 me-3"
+                                                                style="font-size: 10px"></i>Play with your model
+                                                        </li>
+                                                        <li>
+                                                            <i class="fa-solid fa-check rounded-circle text-white bg-accent p-1 me-3"
+                                                                style="font-size: 10px"></i>Export and use model in your
+                                                            app
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed fw-bold fs-18" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#collapseTwo"
+                                                aria-expanded="false" aria-controls="collapseTwo">
+                                                What is machine learning?
+                                            </button>
+                                        </h2>
+                                        <div id="collapseTwo" class="accordion-collapse collapse"
+                                            data-bs-parent="#accordionExample">
+                                            <div class="accordion-body fs-18">
+                                                Machine learning is software that learns to perform a
+                                                task from a collection of examples rather than through
+                                                a person explicitly defining rules and formulas. This
+                                                learning software is called a model. Teaching a model
+                                                through examples is called training. Learn more in
+                                                this
+                                                <a href="https://www.microsoft.com/en-us/ai"
+                                                    class="clr-accent text-decoration-none">beginner crash course.</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed fw-bold fs-18" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#collapseThree"
+                                                aria-expanded="false" aria-controls="collapseThree">
+                                                What kind of machine learning can I train with Lobe ?
+                                            </button>
+                                        </h2>
+                                        <div id="collapseThree" class="accordion-collapse collapse"
+                                            data-bs-parent="#accordionExample">
+                                            <div class="accordion-body fs-18">
+                                                This version of Lobe learns to look at images using
+                                                image classification - categorizing an image into a
+                                                single label overall. We are working to expand to more
+                                                types of problems and data in future versions.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed fw-bold fs-18" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#collapseFour"
+                                                aria-expanded="false" aria-controls="collapseFour">
+                                                What is image classification
+                                            </button>
+                                        </h2>
+                                        <div id="collapseFour" class="accordion-collapse collapse"
+                                            data-bs-parent="#accordionExample">
+                                            <div class="accordion-body fs-18">
+                                                Image classification is categorizing an image into a
+                                                single label to represent its content. Apps using
+                                                image classification could:
+                                                <div class="list">
+                                                    <ul role="list" class="d-grid gap-4 pt-4">
+                                                        <li>
+                                                            <i class="fa-solid fa-check rounded-circle text-white bg-accent p-1 me-3"
+                                                                style="font-size: 10px"></i>Tell you when someone is
+                                                            coming up your front
+                                                            steps
+                                                        </li>
+                                                        <li>
+                                                            <i class="fa-solid fa-check rounded-circle text-white bg-accent p-1 me-3"
+                                                                style="font-size: 10px"></i>Send you photos of a new
+                                                            bird that just started
+                                                            showing up at your bird feede
+                                                        </li>
+                                                        <li>
+                                                            <i class="fa-solid fa-check rounded-circle text-white bg-accent p-1 me-3"
+                                                                style="font-size: 10px"></i>Count the number of push-ups
+                                                            you’ve done in a
+                                                            workout
+                                                        </li>
+                                                        <li>
+                                                            <i class="fa-solid fa-check rounded-circle text-white bg-accent p-1 me-3"
+                                                                style="font-size: 10px"></i>Alert you when a shelf is
+                                                            empty
+                                                        </li>
+                                                        <li>
+                                                            <i class="fa-solid fa-check rounded-circle text-white bg-accent p-1 me-3"
+                                                                style="font-size: 10px"></i>Export and use model in your
+                                                            app
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade show active" id="pane-link1" role="tabpanel">
+                                <div class="accordion" id="accordionExample">
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button fw-bold fs-18" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#collapseOne"
+                                                aria-expanded="true" aria-controls="collapseOne">
+                                                What is labelling?
+                                            </button>
+                                        </h2>
+                                        <div id="collapseOne" class="accordion-collapse collapse show"
+                                            data-bs-parent="#accordionExample">
+                                            <div class="accordion-body fs-18">
+                                                Labeling is assigning categories to your images to
+                                                create examples that teach Lobe. These examples are
+                                                commonly known as a dataset. From this dataset, Lobe
+                                                will learn to automatically predict a label for a
+                                                given image.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed fw-bold fs-18" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#collapseTwo"
+                                                aria-expanded="false" aria-controls="collapseTwo">
+                                                How do i create dataset?
+                                            </button>
+                                        </h2>
+                                        <div id="collapseTwo" class="accordion-collapse collapse"
+                                            data-bs-parent="#accordionExample">
+                                            <div class="accordion-body fs-18">
+                                                Collecting a dataset starts with being clear about the
+                                                problem you’re trying to solve. If the goal is
+                                                training a model to recognize certain objects or
+                                                gestures, you need examples of those things in
+                                                different settings. For images, that means taking
+                                                photos or videos under varying lighting, angles, and
+                                                backgrounds so the model doesn’t get fooled by small
+                                                changes. You’ll also want to balance the classes,
+                                                meaning you shouldn’t have 500 pictures of one object
+                                                and only 20 of another. Each example should be labeled
+                                                correctly, because mislabeled data will confuse the
+                                                model more than help it. Depending on your resources,
+                                                you can gather data yourself with a camera, pull from
+                                                open-source datasets online, or even generate
+                                                synthetic samples with software. The key is variety,
+                                                quality, and accurate labels—those three together make
+                                                a dataset actually useful.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed fw-bold fs-18" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#collapseThree"
+                                                aria-expanded="false" aria-controls="collapseThree">
+                                                What type of images should I collect?
+                                            </button>
+                                        </h2>
+                                        <div id="collapseThree" class="accordion-collapse collapse"
+                                            data-bs-parent="#accordionExample">
+                                            <div class="accordion-body fs-18">
+                                                <div class="accented mb-3">
+                                                    <strong>Collect images that you expect to see in the real
+                                                        world.</strong>
+                                                    <br />
+                                                    Lobe can only learn the patterns that exist in the
+                                                    images you provide as examples. Collect images from
+                                                    the same source you expect to use with your exported
+                                                    model. <br />
+                                                </div>
+                                                <div class="accented mb-3">
+                                                    <strong>Capture as many variations as possible.</strong>
+                                                    <br />
+                                                    Try to capture all the variations that naturally
+                                                    occur by collecting images in different conditions.
+                                                    Try different backgrounds, lighting, orientations,
+                                                    or zoom. This helps Lobe learn what parts of the
+                                                    image are useful for making predictions and what is
+                                                    noise. <br />
+                                                </div>
+                                                <div class="accented">
+                                                    <strong>Make sure your content is visible in the center
+                                                        square of the image.</strong>
+                                                    <br />
+                                                    While training your model, Lobe crops the center
+                                                    square of your images.
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed fw-bold fs-18" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#collapseFour"
+                                                aria-expanded="false" aria-controls="collapseFour">
+                                                What labels should I use?
+                                            </button>
+                                        </h2>
+                                        <div id="collapseFour" class="accordion-collapse collapse"
+                                            data-bs-parent="#accordionExample">
+                                            <div class="accordion-body fs-18">
+                                                <div class="accented mb-3">
+                                                    <strong>Label for each desired prediction.</strong>
+                                                    <br />
+                                                    Create a label for each category you want the model
+                                                    to predict. <br />
+                                                </div>
+                                                <div class="accented">
+                                                    <strong>Catch-all label.</strong> <br />
+                                                    Lobe will always predict one of your supplied labels
+                                                    for each image. If you expect the model to see
+                                                    images that don’t belong to any of your desired
+                                                    labels, create a 'None' label as a catch-all bucket
+                                                    to sh
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed fw-bold fs-18" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#collapseFive"
+                                                aria-expanded="false" aria-controls="collapseFive">
+                                                How many images should I use?
+                                            </button>
+                                        </h2>
+                                        <div id="collapseFive" class="accordion-collapse collapse"
+                                            data-bs-parent="#accordionExample">
+                                            <div class="accordion-body fs-18">
+                                                <div class="accented mb-3">
+                                                    <strong>Gather as many different images as you
+                                                        can.</strong>
+                                                    <br />
+                                                    CA rough guideline is 100-1,000 images per label for
+                                                    smaller problems. To quickly get started with your
+                                                    project, Lobe has a minimum requirement of 5 images
+                                                    per label. <br />
+                                                </div>
+                                                <div class="accented">
+                                                    <strong>Have roughly equal number of images per
+                                                        label.</strong>
+                                                    <br />
+                                                    Balance the number of images between each label. If
+                                                    imbalanced, Lobe will be biased to predict the
+                                                    labels with more images and ignore the labels with
+                                                    fewer images
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed fw-bold fs-18" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#collapseNine"
+                                                aria-expanded="false" aria-controls="collapseNine">
+                                                Can I use images?
+                                            </button>
+                                        </h2>
+                                        <div id="collapseNine" class="accordion-collapse collapse"
+                                            data-bs-parent="#accordionExample">
+                                            <div class="accordion-body fs-18">
+                                                <div class="accented mb-3">
+                                                    You cannot use videos directly with Lobe, but it is
+                                                    a great way to collect many images. Turn your video
+                                                    into frames and select the best and highest variety
+                                                    of images for your problem>
+                                                </div>
+                                                <div class="accented">
+                                                    Have roughly equal number of images per label. You
+                                                    can use a tool like SnapMotion, VLC, Free Video to
+                                                    JPG Converter, or VirtualDub.
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed fw-bold fs-18" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#collapseSix"
+                                                aria-expanded="false" aria-controls="collapseSix">
+                                                What labels should i use?
+                                            </button>
+                                        </h2>
+                                        <div id="collapseSix" class="accordion-collapse collapse"
+                                            data-bs-parent="#accordionExample">
+                                            <div class="accordion-body fs-18">
+                                                Yes! Lobe will use the default camera connected to
+                                                your computer as the primary source. To switch
+                                                cameras, use the source selector in the Label or Use
+                                                views. <br />
+                                                <br />
+
+                                                If you do not see an image from the camera, make sure
+                                                the selected camera is connected to your computer and
+                                                functional, and the Lobe app has permissions to use
+                                                cameras. You can check permissions by going to:
+                                                <div class="list">
+                                                    <ul role="list" class="d-grid gap-4 pt-5">
+                                                        <li>
+                                                            <i class="fa-solid fa-check rounded-circle text-white bg-accent p-1 me-3"
+                                                                style="font-size: 10px"></i>Mac - System Preferences >
+                                                            Security & Privacy >
+                                                            Privacy > Camera
+                                                        </li>
+                                                        <li>
+                                                            <i class="fa-solid fa-check rounded-circle text-white bg-accent p-1 me-3"
+                                                                style="font-size: 10px"></i>Windows - Settings > Privacy
+                                                            > App Permissions
+                                                            > Camera
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container-fluid">
+            <div class="footer-header text-center mb-5">
+                <h1 class="fs-primary-heading mx-auto mt-5 mb-4 fw-black" style="width: 300px">
+                    Train your app with Lobe
+                </h1>
+                <a href="/src/Resources/lobe.txt" download="">
+                    <button class="btn fs-btn rounded-pill bg-accent text-white fw-bold py-2 px-3 btn-wrap">
+                        Download
+                    </button></a>
+            </div>
+        </div>
+        <hr class="mx-auto" width="90%" />
+        <div class="footer-nav d-flex chart-holder gap-3 py-5">
+            <div class="footer-brand">
+                <div class="footer-logo d-flex align-items-center justify-content-center">
+                    <img src="/src/Resources/SVG/logo.svg" alt="Logo" class="" style="width: 75px" />
+                </div>
+                <div class="footer-text text-center mt-3 mb-4">
+                    <p class="mb-0" style="font-size: 18px">
+                        Made with <i class="fa-solid fa-heart text-danger"></i> by
+                        Ohzzy
+                    </p>
+                    <p class="mb-0" style="font-size: 18px">© 2024 Microsoft</p>
+                </div>
+            </div>
+            <div class="footer-items d-grid">
+                <div class="footer-brand-lg">
+                    <div class="footer-logo d-flex">
+                        <img src="/src/Resources/SVG/logo.svg" alt="Logo" class="" style="width: 75px" />
+                    </div>
+                    <div class="footer-text mt-3 mb-4">
+                        <p class="mb-0" style="font-size: 18px">
+                            Made with <i class="fa-solid fa-heart text-danger"></i> by
+                            Ohzzy
+                        </p>
+                        <p class="mb-0" style="font-size: 18px">© 2024 Microsoft</p>
+                    </div>
+                </div>
+                <div class="sect">
+                    <ul class="footer-nav d-grid gap-2 mb-2 mb-md-0 text-center" role="list">
+                        <li class="footer-nav-item fs-footer-nav">
+                            <a class="nav-link active fw-bold" href="#">About</a>
+                        </li>
+                        <li class="footer-nav-item fs-footer-nav">
+                            <a class="nav-link" href="#">Download</a>
+                        </li>
+                        <li class="footer-nav-item fs-footer-nav">
+                            <a class="nav-link" href="#">Overview</a>
+                        </li>
+                        <li class="footer-nav-item fs-footer-nav">
+                            <a class="nav-link" href="#">Examples</a>
+                        </li>
+                        <li class="footer-nav-item fs-footer-nav">
+                            <a class="nav-link" href="#">Blog</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="sect">
+                    <ul class="footer-nav d-grid gap-2 mb-2 mb-md-0 text-center" role="list">
+                        <li class="footer-nav-item fs-footer-nav">
+                            <a class="nav-link active fw-bold" href="#">General</a>
+                        </li>
+                        <li class="footer-nav-item fs-footer-nav">
+                            <a class="nav-link" href="#">Notice</a>
+                        </li>
+                        <li class="footer-nav-item fs-footer-nav">
+                            <a class="nav-link" href="#">License</a>
+                        </li>
+                        <li class="footer-nav-item fs-footer-nav">
+                            <a class="nav-link" href="#">Press Inquiry</a>
+                        </li>
+                        <li class="footer-nav-item fs-footer-nav">
+                            <a class="nav-link" href="#">Press Images</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="sect">
+                    <ul class="footer-nav d-grid gap-2 mb-2 mb-md-0 text-center" role="list">
+                        <li class="footer-nav-item fs-footer-nav">
+                            <a class="nav-link active fw-bold" href="#">Resources</a>
+                        </li>
+                        <li class="footer-nav-item fs-footer-nav">
+                            <a class="nav-link" href="#">Help</a>
+                        </li>
+                        <li class="footer-nav-item fs-footer-nav">
+                            <a class="nav-link" href="#">Tour</a>
+                        </li>
+                        <li class="footer-nav-item fs-footer-nav">
+                            <a class="nav-link" href="#">Contact</a>
+                        </li>
+                        <li class="footer-nav-item fs-footer-nav">
+                            <a class="nav-link" href="#">Privacy</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="sect">
+                    <ul class="footer-nav d-grid gap-2 mb-2 mb-md-0 text-center" role="list">
+                        <li class="footer-nav-item fs-footer-nav">
+                            <a class="nav-link" href="#" aria-label="messages"><i
+                                    class="socials fa-solid fa-message text-white bg-accent rounded-circle p-3"></i></a>
+                        </li>
+
+                        <li class="footer-nav-item fs-footer-nav">
+                            <a class="nav-link" href="#" aria-label="Twitter"><i
+                                    class="socials fa-brands fa-twitter text-white bg-accent rounded-circle p-3"></i></a>
+                        </li>
+
+                        <li class="footer-nav-item fs-footer-nav">
+                            <a class="nav-link" href="#" aria-label="Youtube"><i
+                                    class="socials fa-brands fa-youtube text-white bg-accent rounded-circle p-3"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="/src/bootstrap-5.3.8-dist/js/bootstrap.min.js"></script>
+    <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>

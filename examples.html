@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+    <link
+      rel="stylesheet"
+      href="/src/fontawesome-free-6.2.0-web/css/all.min.css"
+    />
+    <link rel="stylesheet" href="/examples.css" />
+    <link rel="stylesheet" href="src/style.css" />
+    <link href="/src/bootstrap-5.3.8-dist/css/bootstrap.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-md bg-body-white pt-3" style="top: 0">
+        <div
+          class="container-fluid d-flex align-items-center justify-content-between"
+        >
+          <a class="navbar-brand d-flex align-items-center" href="#">
+            <img src="/src/Resources/SVG/logo.svg" alt="Logo" class="w-75" />
+          </a>
+
+          <button
+            class="navbar-toggler bg-accent-100 rounded-circle py-2 px-2"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mx-auto mb-2 mb-md-0 text-left">
+              <li class="nav-item px-100">
+                <a
+                  class="nav-link  fs-primary-nav fw-bold opacity-75"
+                  href="/home"
+                  >Overview</a
+                >
+              </li>
+              <li class="nav-item px-100">
+                <a class="nav-link active fs-primary-nav fw-bold opacity-75" href="/examples"
+                  >Examples</a
+                >
+              </li>
+              <li class="nav-item px-100">
+                <a class="nav-link  fs-primary-nav fw-bold opacity-75" href="/tour"
+                  >Tour</a
+                >
+              </li>
+              <li class="nav-item px-100">
+                <a class="nav-link fs-primary-nav fw-bold opacity-75" href="/blog"
+                  >Blog</a
+                >
+              </li>
+              <li class="nav-item px-100">
+                <a class="nav-link fs-primary-nav fw-bold opacity-75" href="/help"
+                  >Help</a
+                >
+              </li>
+            </ul>
+            <div class="mt-3 mt-md-0 ms-md-3 text-center text-md-end">
+              <a href="/src/Resources/lobe.txt" download="">
+                <button
+                  class="btn fs-btn rounded-pill bg-accent text-white fw-bold nav-btn py-2 px-3"
+                  type="button"
+                  id="download-btn"
+                >
+                  Download
+                </button></a
+              >
+            </div>
+            <div
+              id="confetti-container"
+              style="
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                pointer-events: none;
+                overflow: hidden;
+              "
+            ></div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <section>
+        <div class="container">
+          <div class="header" style="margin-top: 8rem; text-align: center">
+            <h1 class="fs-primary-heading fw-black">
+              Lobe <span class="clr-accent">Examples</span>
+            </h1>
+            <p class="" style="margin: 0 auto; width: 300px;">
+              One tool, endless possibilities. Discover all things you can train
+              your app to do with Lobe.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="container-fluid fluid-holder">
+          <div class="d-grid grid-wrapper gap-5 py-5 m-0 justify-content-center">
+            <div class="grid-container shadow-lg rounded-5">
+              <div class="clips-grid">
+                <video
+                  width="600"
+                  muted
+                  autoplay
+                  loop
+                  class="clip rounded-top-5"
+                >
+                  <source
+                    src="/src/Resources/Videos/vid-1.mp4"
+                    type="video/mp4"
+                  />
+                </video>
+              </div>
+              <div class="text-grids p-4">
+                <p>
+                  <span class="fw-bold">Model Generation</span> <br />
+                  Train your app to distinguish build and <br />generative
+                beautiful AI contents that <br />attracts viewers attention. Draw attention to your application’s unique features.
+                </p>
+              </div>
+            </div>
+            <div class="grid-container shadow-lg rounded-5">
+              <div class="clips-grid">
+                <video
+                  width="600"
+                  muted
+                  autoplay
+                  loop
+                  class="clip rounded-top-5"
+                >
+                  <source
+                    src="/src/Resources/Videos/vid-2.mp4"
+                    type="video/mp4"
+                  />
+                </video>
+              </div>
+              <div class="text-grids p-4">
+                <p>
+                  <span class="fw-bold">Jellyfish Grace</span> <br />
+                  Watch the mesmerizing motion of this jellyfish <br />as it
+                  glides effortlessly through the water, <br />capturing the
+                  beauty and calm of the ocean depths
+                </p>
+              </div>
+            </div>
+              <div class="grid-container shadow-lg rounded-5">
+                <div class="clips-grid">
+                  <video
+                    width="600"
+                    muted
+                    autoplay
+                    loop
+                    class="clip rounded-top-5"
+                  >
+                    <source
+                      src="/src/Resources/Videos/vid-4.mp4"
+                      type="video/mp4"
+                    />
+                  </video>
+                </div>
+                <div class="text-grids p-4">
+                  <p>
+                    <span class="fw-bold">Rocky Majesty</span> <br />
+                    Explore the towering peaks and rugged landscapes <br />of
+                    the Rocky Mountains, <br />where nature’s beauty meets
+                    adventure
+                  </p>
+                </div>
+              </div>
+              <div class="grid-container shadow-lg rounded-5">
+                <div class="clips-grid">
+                  <video
+                    width="600"
+                    muted
+                    autoplay
+                    loop
+                    class="clip rounded-top-5"
+                  >
+                    <source
+                      src="/src/Resources/Videos/vid-5.mp4"
+                      type="video/mp4"
+                    />
+                  </video>
+                </div>
+                <div class="text-grids p-4">
+                  <p>
+                    <span class="fw-bold">Glowing Sunset</span> <br />
+                    Watch the sky light up in warm, vibrant hues <br />as the
+                    sun dips below the horizon, <br />painting the world in
+                    golden tones
+                  </p>
+                </div>
+              </div>
+              <div class="grid-container shadow-lg rounded-5">
+                <div class="clips-grid">
+                  <video
+                    width="600"
+                    muted
+                    autoplay
+                    loop
+                    class="clip rounded-top-5"
+                  >
+                    <source
+                      src="/src/Resources/Videos/vid-13.mp4"
+                      type="video/mp4"
+                    />
+                  </video>
+                </div>
+                <div class="text-grids p-4">
+                  <p>
+                    <span class="fw-bold">Endless Journey</span> <br />
+                    See the road stretch far into the distance <br />from above,
+                    <br />offering a perspective of freedom and adventure
+                  </p>
+                </div>
+              </div>
+            <div class="grid-container shadow-lg rounded-5">
+              <div class="clips-grid">
+                <video
+                  width="600"
+                  muted
+                  autoplay
+                  loop
+                  class="clip rounded-top-5"
+                >
+                  <source
+                    src="/src/Resources/Videos/vid-7.mp4"
+                    type="video/mp4"
+                  />
+                </video>
+              </div>
+              <div class="text-grids p-4">
+                <p>
+                  <span class="fw-bold">Urban Pulse</span> <br />
+                  Discover the vibrant life of a modern city <br />with its
+                  towering skyscrapers and busy streets, <br />a hub of energy
+                  and innovation
+                </p>
+              </div>
+            </div>
+          <div class="grid-container shadow-lg rounded-5">
+            <div class="clips-grid">
+              <video width="600" muted autoplay loop class="clip rounded-top-5">
+                <source
+                  src="/src/Resources/Videos/vid-8.mp4"
+                  type="video/mp4"
+                />
+              </video>
+            </div>
+            <div class="text-grids p-4">
+              <p>
+                <span class="fw-bold">Majestic Bison</span> <br />
+                Witness the strength and grace of this iconic creature <br />as
+                it roams freely across the plains, <br />symbolizing resilience
+                and wild beauty
+              </p>
+            </div>
+          </div>
+            <div class="grid-container shadow-lg rounded-5">
+              <div class="clips-grid">
+                <video
+                  width="600"
+                  muted
+                  autoplay
+                  loop
+                  class="clip rounded-top-5"
+                >
+                  <source
+                    src="/src/Resources/Videos/vid-9.mp4"
+                    type="video/mp4"
+                  />
+                </video>
+              </div>
+              <div class="text-grids p-4">
+                <p>
+                  <span class="fw-bold">Spring Fall</span> <br />
+                  Experience the delicate beauty of leaves in transition,
+                  <br />as vibrant colors blend with fresh spring growth,
+                  capturing nature’s ever-changing charm
+                </p>
+              </div>
+            </div>
+            <div class="grid-container shadow-lg rounded-5">
+              <div class="clips-grid">
+                <video
+                  width="600"
+                  muted
+                  autoplay
+                  loop
+                  class="clip rounded-top-5"
+                >
+                  <source
+                    src="/src/Resources/Videos/vid-12.mp4"
+                    type="video/mp4"
+                  />
+                </video>
+              </div>
+              <div class="text-grids p-4">
+                <p>
+                  <span class="fw-bold">Mountain Majesty</span> <br />
+                  Stand in awe of towering peaks and rugged slopes, <br />where
+                  nature’s strength and beauty meet, <br />offering a sense of
+                  freedom and adventure
+                </p>
+              </div>
+            </div>
+            <div class="grid-container shadow-lg rounded-5">
+              <div class="clips-grid">
+                <video
+                  width="600"
+                  muted
+                  autoplay
+                  loop
+                  class="clip rounded-top-5"
+                >
+                  <source
+                    src="/src/Resources/Videos/vid-13.mp4"
+                    type="video/mp4"
+                  />
+                </video>
+              </div>
+              <div class="text-grids p-4">
+                <p>
+                  <span class="fw-bold">Pathway from Above</span> <br />
+                  See the road unfold from a bird’s-eye view, <br />stretching
+                  into the distance, <br />inviting thoughts of journeys and
+                  possibilities
+                </p>
+              </div>
+            </div>
+            <div class="grid-container shadow-lg rounded-5">
+              <div class="clips-grid">
+                <video
+                  width="600"
+                  muted
+                  autoplay
+                  loop
+                  class="clip rounded-top-5"
+                >
+                  <source
+                    src="/src/Resources/Videos/vid-14.mp4"
+                    type="video/mp4"
+                  />
+                </video>
+              </div>
+              <div class="text-grids p-4">
+                <p>
+                  <span class="fw-bold">Drifting Clouds</span> <br />
+                  Watch the clouds glide gracefully across the sky,
+                  <br />shaping ever-changing patterns, <br />bringing calm and
+                  a sense of endless space
+                </p>
+              </div>
+            </div>
+            <div class="grid-container shadow-lg rounded-5">
+              <div class="clips-grid">
+                <video
+                  width="600"
+                  muted
+                  autoplay
+                  loop
+                  class="clip rounded-top-5"
+                >
+                  <source
+                    src="/src/Resources/Videos/vid-15.mp4"
+                    type="video/mp4"
+                  />
+                </video>
+              </div>
+              <div class="text-grids p-4">
+                <p>
+                  <span class="fw-bold">Rhythmic Tides</span> <br />
+                  Feel the ebb and flow of the ocean waves, <br />as the tides
+                  move with steady rhythm, <br />reminding us of nature’s
+                  endless cycles
+                </p>
+              </div>
+            </div>
+            <div class="grid-container shadow-lg rounded-5">
+              <div class="clips-grid">
+                <video
+                  width="600"
+                  muted
+                  autoplay
+                  loop
+                  class="clip rounded-top-5"
+                >
+                  <source
+                    src="/src/Resources/Videos/vid-1.mp4"
+                    type="video/mp4"
+                  />
+                </video>
+              </div>
+              <div class="text-grids p-4">
+                <p>
+                  <span class="fw-bold">Model Generation</span> <br />
+                  Train your app to distinguish build and <br />generative
+                  beautiful AI contents that <br />attracts viewers attention
+                </p>
+              </div>
+            </div>
+            <div class="grid-container shadow-lg rounded-5">
+              <div class="clips-grid">
+                <video
+                  width="600"
+                  muted
+                  autoplay
+                  loop
+                  class="clip rounded-top-5"
+                >
+                  <source
+                    src="/src/Resources/Videos/vid-8.mp4"
+                    type="video/mp4"
+                  />
+                </video>
+              </div>
+              <div class="text-grids p-4">
+                <p>
+                  <span class="fw-bold">Majestic Buffalo</span> <br />
+                  Witness the strength and grace of this iconic creature
+                  <br />as it roams freely across the plains, <br />symbolizing
+                  resilience and wild beauty
+                </p>
+              </div>
+            </div>
+            <div class="grid-container shadow-lg rounded-5">
+              <div class="clips-grid">
+                <video
+                  width="600"
+                  muted
+                  autoplay
+                  loop
+                  class="clip rounded-top-5"
+                >
+                  <source
+                    src="/src/Resources/Videos/vid-6.mp4"
+                    type="video/mp4"
+                  />
+                </video>
+              </div>
+              <div class="text-grids p-4">
+                <p>
+                  <span class="fw-bold">Glowing Sunset</span> <br />
+                  Watch the sky light up in warm, vibrant hues <br />as the sun
+                  dips below the horizon, <br />painting the world in golden
+                  tones
+                </p>
+              </div>
+            </div>
+            <div class="grid-container shadow-lg rounded-5">
+              <div class="clips-grid">
+                <video
+                  width="600"
+                  muted
+                  autoplay
+                  loop
+                  class="clip rounded-top-5"
+                >
+                  <source
+                    src="/src/Resources/Videos/vid-12.mp4"
+                    type="video/mp4"
+                  />
+                </video>
+              </div>
+              <div class="text-grids p-4">
+                <p>
+                  <span class="fw-bold">Rocky Majesty</span> <br />
+                  Explore the towering peaks and rugged landscapes of the
+                  Rocky Mountains, <br />where nature’s beauty meets adventure
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>
+      </section>
+    </main>
+     <footer>
+    <div class="container-fluid">
+      <div class="footer-header text-center mb-5">
+        <h1 class="fs-primary-heading mx-auto mt-5 mb-4 fw-black" style="width: 300px">
+          Train your app with Lobe
+        </h1>
+        <a href="/src/Resources/lobe.txt" download=""> <button class="btn fs-btn rounded-pill bg-accent text-white fw-bold py-2 px-3 btn-wrap">
+          Download
+        </button></a>
+       
+      </div>
+    </div>
+    <hr class="mx-auto" width="90%" />
+    <div class="footer-nav d-flex chart-holder gap-3 py-5">
+      <div class="footer-brand">
+        <div class="footer-logo d-flex align-items-center justify-content-center">
+          <img src="/src/Resources/SVG/logo.svg" alt="Logo" class="" style="width: 75px" />
+        </div>
+        <div class="footer-text text-center mt-3 mb-4">
+          <p class="mb-0" style="font-size: 18px">
+            Made with <i class="fa-solid fa-heart text-danger"></i> by
+            Ohzzy
+          </p>
+          <p class="mb-0" style="font-size: 18px">© 2024 Microsoft</p>
+        </div>
+      </div>
+      <div class="footer-items d-grid ">
+              <div class="footer-brand-lg">
+        <div class="footer-logo d-flex">
+          <img src="/src/Resources/SVG/logo.svg" alt="Logo" class="" style="width: 75px" />
+        </div>
+        <div class="footer-text mt-3 mb-4">
+          <p class="mb-0" style="font-size: 18px">
+            Made with <i class="fa-solid fa-heart text-danger"></i> by
+            Ohzzy
+          </p>
+          <p class="mb-0" style="font-size: 18px">© 2024 Microsoft</p>
+        </div>
+      </div>
+        <div class="sect">
+          <ul class="footer-nav d-grid gap-2 mb-2 mb-md-0 text-center" role="list">
+            <li class="footer-nav-item fs-footer-nav">
+              <a class="nav-link active fw-bold" href="#">About</a>
+            </li>
+            <li class="footer-nav-item fs-footer-nav">
+              <a class="nav-link" href="#">Download</a>
+            </li>
+            <li class="footer-nav-item fs-footer-nav">
+              <a class="nav-link" href="#">Overview</a>
+            </li>
+            <li class="footer-nav-item fs-footer-nav">
+              <a class="nav-link" href="#">Examples</a>
+            </li>
+            <li class="footer-nav-item fs-footer-nav">
+              <a class="nav-link" href="#">Blog</a>
+            </li>
+          </ul>
+        </div>
+        <div class="sect">
+          <ul class="footer-nav d-grid gap-2 mb-2 mb-md-0 text-center" role="list">
+            <li class="footer-nav-item fs-footer-nav">
+              <a class="nav-link active fw-bold" href="#">General</a>
+            </li>
+            <li class="footer-nav-item fs-footer-nav">
+              <a class="nav-link" href="#">Notice</a>
+            </li>
+            <li class="footer-nav-item fs-footer-nav">
+              <a class="nav-link" href="#">License</a>
+            </li>
+            <li class="footer-nav-item fs-footer-nav">
+              <a class="nav-link" href="#">Press Inquiry</a>
+            </li>
+            <li class="footer-nav-item fs-footer-nav">
+              <a class="nav-link" href="#">Press Images</a>
+            </li>
+          </ul>
+        </div>
+        <div class="sect">
+          <ul class="footer-nav d-grid gap-2 mb-2 mb-md-0 text-center" role="list">
+            <li class="footer-nav-item fs-footer-nav">
+              <a class="nav-link active fw-bold" href="#">Resources</a>
+            </li>
+            <li class="footer-nav-item fs-footer-nav">
+              <a class="nav-link" href="#">Help</a>
+            </li>
+            <li class="footer-nav-item fs-footer-nav">
+              <a class="nav-link" href="#">Tour</a>
+            </li>
+            <li class="footer-nav-item fs-footer-nav">
+              <a class="nav-link" href="#">Contact</a>
+            </li>
+            <li class="footer-nav-item fs-footer-nav">
+              <a class="nav-link" href="#">Privacy</a>
+            </li>
+          </ul>
+        </div>
+        <div class="sect">
+          <ul class="footer-nav d-grid gap-2 mb-2 mb-md-0 text-center" role="list">
+            <li class="footer-nav-item fs-footer-nav">
+              <a class="nav-link" href="#" aria-label="messages"><i
+                  class="socials fa-solid fa-message text-white bg-accent rounded-circle p-3"></i></a>
+            </li>
+
+            <li class="footer-nav-item fs-footer-nav">
+              <a class="nav-link" href="#" aria-label="Twitter"><i
+                  class="socials fa-brands fa-twitter text-white bg-accent rounded-circle p-3"></i></a>
+            </li>
+
+            <li class="footer-nav-item fs-footer-nav">
+              <a class="nav-link" href="#" aria-label="Youtube"><i
+                  class="socials fa-brands fa-youtube text-white bg-accent rounded-circle p-3"></i></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="/src/bootstrap-5.3.8-dist/js/bootstrap.min.js"></script>
+  <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

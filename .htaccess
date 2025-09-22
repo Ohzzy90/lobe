@@ -1,0 +1,16 @@
+RewriteEngine On
+
+# Map /home to index.html
+RewriteRule ^home$ index.html [L]
+
+# Map /examples to examples.html
+RewriteRule ^examples$ examples.html [L]
+
+# Map /tour to tour.html
+RewriteRule ^tour$ tour.html [L]
+
+# Map /help to help.html
+RewriteRule ^help$ help.html [L]
+
+# Map /blog to blog.html (if you ever make one)
+RewriteRule ^blog$ blog.html [L]
