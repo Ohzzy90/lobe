@@ -11,5 +11,8 @@
   },
   "devDependencies": {
     "vite": "^7.1.2"
+  },
+  "dependencies": {
+    "express": "^5.1.0"
   }
 }
