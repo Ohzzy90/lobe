@@ -7,7 +7,9 @@ const PORT = 3000
 app.use(express.static(path.join(__dirname, 'dist')))
 
 // Pretty URL mapping
-
+app.get(['/', '/home'], (req, res) => {
+  res.sendFile(path.join(__dirname, 'dist', 'index.html'))
+})
 app.get(['/examples', '/tour', '/blog', '/help'], (req, res) => {
   const page = req.path.slice(1) + '.html'
   res.sendFile(path.join(__dirname, 'dist', page))
